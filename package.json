@@ -23,7 +23,7 @@
   "dependencies": {
     "camel-case": "^1.2.2",
     "knex": "^0.9.0",
-    "laic": "^0.3.3",
+    "laic": "^0.3.4",
     "objection": "^0.3.3",
     "pg": "^4.4.3",
     "snake-case": "^1.1.2"
