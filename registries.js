@@ -2,16 +2,14 @@
 
 const path = require('path');
 const ioc = require('laic').laic.addNamespace('registriesDB');
-const Knex = require('knex');
 const objection = require('objection');
 const Model = objection.Model;
 
-module.exports = function registries(knexConfig) {
-  if (!knexConfig) {
-    throw new Error('missing Knex configuration');
+module.exports = function registries(knex) {
+  if (!knex) {
+    throw new Error('missing Knex instance');
   }
 
-  const knex = new Knex(knexConfig);
   Model.knex(knex);
 
   ioc.register('objection', objection, false);
